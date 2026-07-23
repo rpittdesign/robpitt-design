@@ -1,0 +1,144 @@
+.case-study__header {
+  padding: clamp(3rem, 6vw, 5rem) 0 clamp(2rem, 4vw, 3rem);
+  background: var(--background-accent);
+  border-bottom: 1px solid var(--rule);
+}
+
+.case-study__meta {
+  font-family: var(--font-logo);
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  margin: 0 0 1rem;
+}
+
+.case-study__title {
+  font-family: var(--font-logo);
+  font-weight: 700;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--text-strong);
+  margin: 0 0 1.5rem;
+  max-width: 24ch;
+}
+
+.case-study__lede {
+  font-family: var(--font-body);
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  line-height: 1.5;
+  max-width: 42rem;
+  color: var(--text);
+  margin: 0;
+}
+
+.case-study__section {
+  padding: clamp(2.5rem, 5vw, 4rem) 0;
+}
+
+.case-study__section--wide {
+  padding: clamp(1.5rem, 3vw, 2.5rem) 0;
+}
+
+.case-study__label {
+  font-family: var(--font-logo);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.85rem;
+  color: var(--text-accent);
+  margin: 0 0 0.75rem;
+}
+
+.case-study__section ul,
+.case-study__section ol {
+  margin: 0.5rem 0 1.25rem;
+  padding-left: 1.25rem;
+}
+
+.case-study__section li {
+  margin-bottom: 0.35rem;
+}
+
+.case-study__section p + .case-study__label,
+.case-study__section ul + .case-study__label,
+.case-study__section ol + .case-study__label,
+.case-study__section blockquote + .case-study__label {
+  margin-top: 2rem;
+}
+
+.case-study__section blockquote {
+  margin: 1.5rem 0;
+  padding: 1.25rem 1.5rem;
+  border-left: 3px solid var(--text-accent);
+  background: var(--background-accent);
+  font-family: var(--font-body);
+  font-style: italic;
+  color: var(--text-strong);
+  font-size: 1.05rem;
+  line-height: 1.5;
+  border-radius: 0 4px 4px 0;
+}
+
+.case-study__section blockquote cite {
+  display: block;
+  margin-top: 0.75rem;
+  font-style: normal;
+  font-family: var(--font-logo);
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.figure {
+  margin: 0 auto;
+  max-width: 1280px;
+  padding: 0 var(--pad);
+}
+
+.figure + .figure { margin-top: 2rem; }
+
+.figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  background: var(--background);
+}
+
+.figure figcaption {
+  font-family: var(--font-logo);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 0.75rem;
+  text-align: center;
+}
+
+.figure--split {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 800px) {
+  .figure--split { grid-template-columns: 1fr 1fr; }
+}
+
+.case-study__footer {
+  padding: 2rem 0 3rem;
+  border-top: 1px solid var(--rule);
+  margin-top: 2rem;
+}
+
+.case-study__back {
+  font-family: var(--font-logo);
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--text-strong);
+}
+
+.case-study__back:hover { color: var(--text-accent); }

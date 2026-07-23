@@ -1,0 +1,58 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Rob Pitt — designer, maker, twenty-five years of taste met AI." } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@500;700;800&family=Literata:opsz,wght@7..72,400;7..72,500;7..72,600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍂</text></svg>"
+    />
+    <!-- Built with Epomon 🍂 -->
+  </head>
+  <body>
+    <header class="site-header">
+      <a href="/" class="site-header__logo">robpitt</a>
+      <nav class="site-header__nav">
+        <a href="#now">now</a>
+        <a href="#shipped">shipped</a>
+        <a href="#writings">writings</a>
+        <a href="mailto:rpitt@hey.com">say hi</a>
+      </nav>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <span class="site-footer__signature">
+        Built with Epomon <span class="leaf">🍂</span>
+      </span>
+      <nav>
+        <a href="https://linkedin.com/in/robpittdesign">LinkedIn ↗</a>
+        <a href="https://adplist.org/mentors/rob-pitt">ADP List ↗</a>
+        <a href="https://medium.com/@ummummhm">Medium ↗</a>
+      </nav>
+    </footer>
+
+  </body>
+</html>

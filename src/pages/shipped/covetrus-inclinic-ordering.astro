@@ -1,0 +1,109 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Covetrus In-Clinic Ordering — Rob Pitt"
+  description="Replaced two legacy systems with one platform for in-clinic veterinary medicine ordering. Cut pharmacy call volume by 18.9%."
+>
+  <article class="case-study">
+    <header class="case-study__header">
+      <div class="container">
+        <p class="case-study__meta">Covetrus (Vet's First Choice) · 2017–2019 · Portland, ME</p>
+        <h1 class="case-study__title">One ordering platform for vets, replacing two legacy systems.</h1>
+        <p class="case-study__lede">
+          Every veterinary clinic in Covetrus's network was calling the pharmacy to reorder in-clinic medicine — for every product, every time. Two aging tools existed to help, and both were making it worse. I led the design of one replacement that reduced call volume by 18.9% and shipped inside a landscape of controlled-substance regulation.
+        </p>
+      </div>
+    </header>
+
+    <section class="case-study__section case-study__section--wide">
+      <figure class="figure">
+        <img src="/case-studies/inclinic-ordering/prototype.gif" alt="V1 prototype animated" loading="lazy" />
+        <figcaption>V1 prototype used in sprint workshops.</figcaption>
+      </figure>
+    </section>
+
+    <section class="case-study__section">
+      <div class="container narrow">
+        <p class="case-study__label">The problem</p>
+        <p>
+          Covetrus needed to reduce call volume to their pharmacies and enable veterinarians to easily reorder medicine for in-clinic use. Two legacy tools tried to help. Both created more calls than they prevented.
+        </p>
+
+        <p class="case-study__label">My role</p>
+        <p>
+          I led the end-to-end design of a new ecommerce platform tailored to clinic reordering workflows — a real domain problem, not a generic ecomm rebuild.
+        </p>
+
+        <p class="case-study__label">Process</p>
+        <ul>
+          <li>Facilitated a modified Google Design Sprint to align on direction</li>
+          <li>Created the interactive prototype used across sprint workshops</li>
+          <li>Ran three moderated and ten unmoderated usability tests</li>
+          <li>Iterated based on research insights and stakeholder feedback</li>
+          <li>Partnered with legal to accommodate regulatory requirements around controlled substances</li>
+        </ul>
+
+        <p class="case-study__label">Challenges</p>
+        <ul>
+          <li>Seamless integration required with an existing, rigid prescription platform</li>
+          <li>Restricted to a variant of Google's Material design system</li>
+          <li>Complex regulations around controlled medicines, varying by state</li>
+          <li>Geographically distributed stakeholders across multiple clinics and regions</li>
+          <li>Aggressive timeline and a mid-project pivot from the initial concept</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="case-study__section case-study__section--wide">
+      <figure class="figure figure--split">
+        <div>
+          <img src="/case-studies/inclinic-ordering/live-vfc-ouo1.gif" alt="Finding the product" loading="lazy" />
+          <figcaption>Finding the product.</figcaption>
+        </div>
+        <div>
+          <img src="/case-studies/inclinic-ordering/live-vfc-ouo2.gif" alt="Adding to cart" loading="lazy" />
+          <figcaption>Adding to cart.</figcaption>
+        </div>
+      </figure>
+      <figure class="figure figure--split">
+        <div>
+          <img src="/case-studies/inclinic-ordering/live-vfc-ouo3.gif" alt="Checkout" loading="lazy" />
+          <figcaption>Checkout.</figcaption>
+        </div>
+        <div>
+          <img src="/case-studies/inclinic-ordering/live-vfc-ouo4.gif" alt="California regulations" loading="lazy" />
+          <figcaption>California regulations, handled inline.</figcaption>
+        </div>
+      </figure>
+    </section>
+
+    <section class="case-study__section">
+      <div class="container narrow">
+        <p class="case-study__label">The result</p>
+        <p>
+          The solution I designed replaced two legacy systems and cut pharmacy call volume by <strong>18.9%</strong>. To my knowledge it's still in use today. Startup → IPO at $34/share during my time at Covetrus.
+        </p>
+
+        <p class="case-study__label">What I actually did</p>
+        <ul>
+          <li>Identified real clinic ordering needs through research</li>
+          <li>Conceptualized intuitive reorder flows that stayed compliant with regulations</li>
+          <li>Validated UX direction through multiple rounds of prototyping and testing</li>
+          <li>Delivered a final end-to-end platform aligned to both business and user goals</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer class="case-study__footer">
+      <div class="container narrow">
+        <a href="/#shipped" class="case-study__back">← back to all work</a>
+      </div>
+    </footer>
+  </article>
+</BaseLayout>
+
+<style>
+  @import "../../styles/case-study.css";
+</style>
