@@ -250,7 +250,13 @@ section:nth-child(even) {
   letter-spacing: normal;
 }
 
-.item__title a { text-decoration: none; }
+.item__title a {
+  text-decoration: underline;
+  text-decoration-color: var(--text-accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+  color: var(--text-strong);
+}
 .item__title a:hover { color: var(--text-accent); }
 
 .item__meta {
