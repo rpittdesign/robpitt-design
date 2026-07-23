@@ -306,7 +306,8 @@ section:nth-child(even) {
 /* CONTACT */
 .contact {
   text-align: left;
-  padding: clamp(3rem, 6vw, 5rem) 0;
+  padding-top: clamp(3rem, 6vw, 5rem);
+  padding-bottom: clamp(3rem, 6vw, 5rem);
 }
 
 .contact__email {
