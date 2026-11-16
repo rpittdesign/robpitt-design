@@ -1,0 +1,133 @@
+<section id="intro" aria-label="All of my friends are agents">
+  <p class="sr-only">Sage, Epomon and Claude drawn in pen. Perpleckcity flies in trailing printer paper, then lands with a zzzt. Optional sound imitates a dot matrix printer.</p>
+  <div id="stage">
+    <div id="world">
+      <canvas class="tape" id="tapeBack" aria-hidden="true"></canvas>
+      <img id="title" class="layer" src="/intro/title.png" alt="All of my friends are" width="611" height="149">
+      <img id="friends" class="layer" src="/intro/friends.png" alt="Sage (GPT), Epomon and Claude drawn in pen" width="921" height="510">
+      <img id="agents" class="layer" src="/intro/agents.png" alt="Agents" width="830" height="275">
+      <canvas class="tape" id="tapeFront" aria-hidden="true"></canvas>
+      <div id="shadow"></div>
+      <div class="bot" id="bot" aria-hidden="true">
+        <img class="signal" id="signal" src="/intro/signal.png" alt="" width="144" height="61">
+        <img class="body" src="/intro/sphere.png" alt="" width="211" height="320">
+      </div>
+      <img id="zzzt" src="/intro/zzzt.png" alt="" width="234" height="44" aria-hidden="true">
+      <img id="label" src="/intro/perpleckcity.png" alt="Perpleckcity, the supervisor" width="402" height="84">
+    </div>
+    <button id="pause" class="pen-btn" type="button">pause</button>
+    <button id="sound" class="pen-btn" type="button" aria-pressed="false">sound off</button>
+    <button id="replay" class="pen-btn" type="button">replay</button>
+  </div>
+<noscript><style>#stage { display:none; } .intro-still { max-width:700px; margin:auto; } .intro-still img { display:block; margin:1rem auto; }</style><div class="intro-still"><img src="/intro/title.png" alt="All of my friends are" /><img src="/intro/friends.png" alt="Sage, Epomon and Claude" /><img src="/intro/agents.png" alt="Agents" /></div></noscript>
+</section>
+<style>
+#title { left:164px; top:24px; }
+#friends { left:10px; top:205px; }
+#agents { left:55px; top:1010px; }
+#bot { opacity:0; }
+
+  /* Layout: one notebook page. The drawing sits on a CSS dot grid scaled and aligned
+     to the original page's 45px dot pitch. Single paper theme by choice. */
+  #intro {
+    --paper: var(--background);
+    --ink: #111111;
+    --dot: #2a2a2a;
+    --shade: #c8c8c8;
+    --hand: "Patrick Hand", "Comic Sans MS", "Marker Felt", cursive;
+    --k: 1;
+    --dotx: 0px; --doty: 0px;
+    --arw: 940; --arh: 1390; --maxw: 640px;   /* portrait first; JS swaps in the wide layout */
+    --vx: 0px;
+  }
+
+
+
+  #intro {
+    position: relative;
+    min-height: 0;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);   /* lets the stage's 100% mean the column, not its content */
+    place-items: center;
+    padding-block: 24px 80px;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+    overflow: hidden;
+    background-color: var(--paper);
+    background-image: radial-gradient(circle, var(--dot) 0 calc(1.1px * var(--k) + .35px), transparent calc(1.1px * var(--k) + .9px));
+    background-size: calc(45px * var(--k)) calc(45px * var(--k));
+    background-position: var(--dotx) var(--doty);
+    box-sizing: border-box;
+  }
+
+  #stage {
+    position: relative;
+    width: min(100%, calc((100svh - 180px) * var(--arw) / var(--arh)), var(--maxw));
+    aspect-ratio: var(--arw) / var(--arh);
+    max-width: 100%;
+  }
+  #world {
+    position: absolute; left: 0; top: 0;
+    width: 1400px; height: 1390px;
+    transform-origin: 0 0;
+    transform: scale(var(--k)) translateX(var(--vx));
+  }
+  #world img { display: block; position: absolute; user-select: none; -webkit-user-drag: none; }
+
+  /* the drawing in three layers so phones can stack them; positions come from the layout */
+  .layer { z-index: 2; }
+  #title { width: 611px; height: 149px; }
+  #friends { width: 921px; height: 510px; }
+  #agents { width: 830px; height: 275px; }
+
+  /* tape canvases reach far left of the stage so the trail can run off the page */
+  canvas.tape { position: absolute; left: -1400px; top: 0; width: 2800px; height: 1390px; pointer-events: none; }
+  #tapeBack { z-index: 1; }
+  #tapeFront { z-index: 3; }
+
+  .bot {
+    position: absolute; left: 0; top: 0;
+    width: 211px; height: 320px;
+    transform-origin: 104px 207px;
+    z-index: 1;
+    will-change: transform, filter;
+  }
+  .bot img.body { left: 0; top: 0; width: 211px; height: 320px; }
+  .bot img.signal { left: 23px; top: -23px; width: 144px; height: 61px; transform-origin: 77px 38px; }
+
+  #shadow {
+    position: absolute; left: 0; top: 0;
+    width: 240px; height: 34px; margin: -17px 0 0 -120px;
+    border-radius: 50%;
+    background: var(--shade);
+    z-index: 1;
+    opacity: 0;
+  }
+
+  #zzzt { width: 234px; height: 44px; z-index: 5; transform-origin: 0 50%; clip-path: inset(0 100% 0 0); }
+
+  #label { width: 402px; height: 84px; z-index: 5; transform-origin: 0 0; clip-path: inset(0 100% 0 0); }
+
+  .pen-btn {
+    position: absolute; bottom: -56px;
+    font: 1.15rem/1 var(--hand);
+    color: var(--ink);
+    background: var(--paper);
+    border: 2px solid var(--ink);
+    border-radius: 14px 10px 16px 9px;
+    padding: .35em .8em .3em;
+    cursor: pointer;
+    z-index: 6;
+  }
+  .pen-btn:hover { background: var(--shade); }
+  .pen-btn:focus-visible { outline: 3px dashed var(--ink); outline-offset: 3px; }
+  #replay { right: max(4px, env(safe-area-inset-right, 0px)); opacity: 1; }
+  #replay.show { opacity: 1; }
+  #sound { left: max(4px, env(safe-area-inset-left, 0px)); }
+  #sound[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+
+#pause { left: 50%; transform: translateX(-50%); }
+.pen-btn { min-height: 44px; }
+
+</style>
+<script>import "../scripts/epomon-intro.js";</script>

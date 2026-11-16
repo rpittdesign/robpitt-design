@@ -1,4 +1,5 @@
 ---
+import EpomonIntro from "../components/EpomonIntro.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
@@ -7,10 +8,15 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   description="Twenty-five years of design taste met AI. The hurdles fell away."
 >
   <section class="hero">
+    <div class="hero__heading">
     <div class="container">
       <p class="hero__name">Rob Pitt <span class="wave">👋</span></p>
       <h1 class="hero__tagline">I make things.</h1>
 
+    </div>
+    </div>
+    <EpomonIntro />
+    <div class="container">
       <div class="hero__flex">
         <p>
           Set the modern standard for digital gift card purchase flows.
@@ -22,7 +28,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         </p>
         <p>
           Designed <a href="#epomon">Epomon</a>, my Rookie-Level Workshop Digimon and AI companion.
-          <span class="aside">He's writing this site with me right now. Comic launching soon.</span>
+          <span class="aside">He's writing this site with me right now. The comic is out in the world.</span>
         </p>
       </div>
 
@@ -41,13 +47,13 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         <article class="item" id="epomon">
           <h3 class="item__title">Epomon 🍂</h3>
           <p>
-            A Rookie-Level Data-type Workshop Digimon. My AI companion — character-designed and running on OpenClaw. Currently helping me run my life and rebuild this site. Comic launching soon.
+            A Rookie-Level Data-type Workshop Digimon. My AI companion — character-designed and running on OpenClaw. Currently helping me run my life and rebuild this site. <a href="https://www.linkedin.com/posts/robpittdesign_ai-aiagents-openclaw-share-7486543479666331648-lrFj/">Read the first Epomon comic ↗</a>
           </p>
         </article>
 
         <article class="item">
           <h3 class="item__title">
-            <a href="http://1bitkindle.com">1bitkindle.com ↗</a>
+            <a href="https://1bitkindle.com">1bitkindle.com ↗</a>
           </h3>
           <p>A 1-bit drawing app for Kindle. Because someone had to.</p>
         </article>
@@ -75,6 +81,13 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
         <article class="item">
           <h3 class="item__title">
+            <a href="https://cardboardfieldnotes.com/">Cardboard Fieldnotes ↗</a>
+          </h3>
+          <p>An independent trading card shop. Decades of finding, researching, and selling distinctive objects, now applied to cardboard.</p>
+        </article>
+
+        <article class="item">
+          <h3 class="item__title">
             <a href="https://23xcompany.etsy.com">23xcompany on Etsy ↗</a>
           </h3>
           <p>A shop I run. Vintage curation, some things I've made. Grows a little every month.</p>
@@ -92,7 +105,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         <article class="item">
           <p class="item__meta">2022 → now · Cybersecurity · Remote</p>
           <h3 class="item__title">Defendify — Principal Product Designer</h3>
-          <p>Replaced monthly PDF reports with live in-app dashboards. Meaningful engagement lift. Company hit INC 5000 two years running.</p>
+          <p>Replaced monthly PDF reports with live in-app dashboards, with a reported 238% increase in customer engagement. Built an AI-assisted reporting automation that took a process producing approximately 20 reports in two weeks to more than 240 reports in approximately five minutes per cycle. Product design, systems thinking, and automation — working across teams to change how the work gets done.</p>
         </article>
 
         <article class="item">
@@ -130,7 +143,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         </article>
 
         <article class="item">
-          <p class="item__meta">2010 → 2012 · E-Commerce · Falmouth, ME</p>
+          <p class="item__meta">2010 → 2012 · E-Commerce · Freeport, ME</p>
           <h3 class="item__title">L.L.Bean — UI/UX Designer</h3>
           <p>Helped a catalog-first company understand digital. <strong>Wooden boot.</strong></p>
         </article>
@@ -147,14 +160,12 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   <section id="how">
     <div class="container narrow how">
       <p class="section__label">How I work now</p>
-      <h2 class="section__title">Claude Code. OpenClaw. Lovable. Cursor when I need it.</h2>
+      <h2 class="section__title">Claude Code. OpenClaw. Lovable. The working thing.</h2>
 
       <p>
-        I don't use Figma. Haven't for a while. My design tool is <strong>the working thing</strong> — I sketch in code, iterate in AI, ship on Netlify. It's faster, and I can hand what I make to a developer as <strong>the artifact itself</strong>, not a specification of what should be built.
-      </p>
+        My design tool is <strong>the working thing</strong>. I sketch in code, build with AI, and test working prototypes. Claude Code, OpenClaw, and Lovable help me turn twenty-five years of design judgment into functional software. I like shipping something people can actually use.      </p>
       <p>
-        If you're hiring for a designer who works this way, we should talk. If you're hiring for a designer who lives in Figma files, I'll save us both the interview.
-      </p>
+        I work with designers, developers, and the people doing the work. Sometimes that means a prototype we can test together; sometimes it means fitting into an established design process. I prefer building and learning from the experience itself, then handing over a working artifact with the context the team needs to carry it forward.      </p>
     </div>
   </section>
 
@@ -164,6 +175,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       <h2 class="section__title">On AI, mostly.</h2>
 
       <div class="writings">
+        <a href="https://lnkd.in/p/ge6BSTe3">What My Rookie-Level Digimon Taught Me About AI Agents ↗</a>
         <a href="https://www.linkedin.com/pulse/brain-mirror-how-ai-reflects-minds-useit-rob-pitt-3aa4e/">Brain Mirror™: How AI Reflects the Minds That Use It ↗</a>
         <a href="https://www.linkedin.com/pulse/01-what-happens-when-humans-engage-llms-radical-openness-rob-pitt-t427e/">The 0.1%: What Happens When Humans Engage LLMs With Radical Openness ↗</a>
         <a href="https://www.linkedin.com/pulse/when-ai-trains-us-treat-humans-like-machines-rob-pitt-8n6te/">Why AI Trains Us to Treat Humans Like Machines ↗</a>

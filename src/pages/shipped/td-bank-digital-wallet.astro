@@ -16,25 +16,26 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
         </p>
       </div>
     </header>
+    <div class="container animation-control"><button type="button" data-motion-toggle aria-pressed="false">Pause case-study animations</button></div>
 
     <section class="case-study__section case-study__section--wide">
       <figure class="figure figure--split">
         <div>
-          <img src="/case-studies/digital-wallet/research/currentprocess.png" alt="High level current process" loading="lazy" />
+          <img src="/case-studies/digital-wallet/research/currentprocess.webp" alt="High level current process" loading="lazy"  width="1142" height="699" />
           <figcaption>Current-state process map.</figcaption>
         </div>
         <div>
-          <img src="/case-studies/digital-wallet/research/hmw.png" alt="How might we — convergence" loading="lazy" />
+          <img src="/case-studies/digital-wallet/research/hmw.webp" alt="How might we — convergence" loading="lazy"  width="1071" height="894" />
           <figcaption>How-might-we synthesis.</figcaption>
         </div>
       </figure>
       <figure class="figure figure--split">
         <div>
-          <img src="/case-studies/digital-wallet/research/diverge.png" alt="Ideation and vote" loading="lazy" />
+          <img src="/case-studies/digital-wallet/research/diverge.webp" alt="Ideation and vote" loading="lazy"  width="1238" height="756" />
           <figcaption>Idea divergence and dot-voting.</figcaption>
         </div>
         <div>
-          <img src="/case-studies/digital-wallet/research/userflow.png" alt="Two-concept user flow" loading="lazy" />
+          <img src="/case-studies/digital-wallet/research/userflow.webp" alt="Two-concept user flow" loading="lazy"  width="1245" height="781" />
           <figcaption>Two-concept user flow.</figcaption>
         </div>
       </figure>
@@ -42,12 +43,12 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 
     <section class="case-study__section">
       <div class="container narrow">
-        <p class="case-study__label">My role</p>
+        <h2 class="case-study__label">My role</h2>
         <p>
-          Head of design across three concurrent initiatives. I led a distributed team of designers, researchers, and writers through a full human-centered process: research, ideation, prototyping, usability testing, and delivery. Miro became the enterprise workshop standard on my watch — part of a year-long remote-first adoption effort.
+          As Senior UX Design Manager, I led design across three concurrent initiatives. I led a distributed team of designers, researchers, and writers through a full human-centered process: research, ideation, prototyping, usability testing, and delivery. Miro became the enterprise workshop standard on my watch — part of a year-long remote-first adoption effort.
         </p>
 
-        <p class="case-study__label">Process</p>
+        <h2 class="case-study__label">Process</h2>
         <ul>
           <li>Member research to uncover real payment preferences</li>
           <li>Facilitated ideation workshops on digital wallet solutions</li>
@@ -61,21 +62,21 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     <section class="case-study__section case-study__section--wide">
       <figure class="figure figure--split">
         <div>
-          <img src="/case-studies/digital-wallet/wires/debit1.png" alt="Debit concept wireframes v1" loading="lazy" />
+          <img src="/case-studies/digital-wallet/wires/debit1.webp" alt="Debit concept wireframes v1" loading="lazy"  width="1542" height="964" />
           <figcaption>Debit concepts, v1.</figcaption>
         </div>
         <div>
-          <img src="/case-studies/digital-wallet/wires/debit2.png" alt="Debit concept wireframes v2" loading="lazy" />
+          <img src="/case-studies/digital-wallet/wires/debit2.webp" alt="Debit concept wireframes v2" loading="lazy"  width="856" height="951" />
           <figcaption>Debit concepts, v2.</figcaption>
         </div>
       </figure>
       <figure class="figure figure--split">
         <div>
-          <img src="/case-studies/digital-wallet/wires/newcc1.png" alt="New credit card wireframes v1" loading="lazy" />
+          <img src="/case-studies/digital-wallet/wires/newcc1.webp" alt="New credit card wireframes v1" loading="lazy"  width="856" height="964" />
           <figcaption>Credit card, v1.</figcaption>
         </div>
         <div>
-          <img src="/case-studies/digital-wallet/wires/newcc2.png" alt="New credit card wireframes v2" loading="lazy" />
+          <img src="/case-studies/digital-wallet/wires/newcc2.webp" alt="New credit card wireframes v2" loading="lazy"  width="1162" height="964" />
           <figcaption>Credit card, v2.</figcaption>
         </div>
       </figure>
@@ -83,7 +84,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 
     <section class="case-study__section">
       <div class="container narrow">
-        <p class="case-study__label">Challenges</p>
+        <h2 class="case-study__label">Challenges</h2>
         <ul>
           <li>Gaining executive buy-in on design direction inside the US</li>
           <li>Re-aligning the experience to meet requirements from Canadian partners</li>
@@ -92,7 +93,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
           <li>Mitigating friction between conflicting opinions on UX direction</li>
         </ul>
 
-        <p class="case-study__label">The result</p>
+        <h2 class="case-study__label">The result</h2>
         <p>
           Research validated that members would adopt mobile wallets if the experience delivered simplicity and security. My team shipped a human-centered vision and design direction to make it real. The work led directly to a PayPal digital-wallets partnership.
         </p>
@@ -101,7 +102,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 
     <section class="case-study__section case-study__section--wide">
       <figure class="figure">
-        <img src="/case-studies/digital-wallet/prototype.gif" alt="V1 prototype in motion" loading="lazy" />
+        <picture><source media="(prefers-reduced-motion: reduce)" srcset="/case-studies/digital-wallet/prototype-still.webp" /><img data-animated="/case-studies/digital-wallet/prototype.gif" data-still="/case-studies/digital-wallet/prototype-still.webp" src="/case-studies/digital-wallet/prototype.gif" alt="V1 prototype in motion" loading="lazy"  width="464" height="874" /></picture>
         <figcaption>V1 prototype in motion.</figcaption>
       </figure>
     </section>
@@ -113,7 +114,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
           <cite>— E.K., VP of US Design</cite>
         </blockquote>
 
-        <p class="case-study__label">What I actually did</p>
+        <h2 class="case-study__label">What I actually did</h2>
         <ul>
           <li>Led end-to-end design strategy from research to final recommendations</li>
           <li>Collaborated across disciplines to shape a shared UX vision</li>

@@ -142,3 +142,9 @@
 }
 
 .case-study__back:hover { color: var(--text-accent); }
+
+.case-study__label { margin-top: 2rem; color: #9a4a16; }
+.animation-control { padding-block: .5rem; }
+.animation-control button { font: .8rem var(--font-logo); min-height: 44px; border: 1px solid var(--text-muted); color: var(--text); background: var(--background); border-radius: 4px; padding: .4rem .8rem; }
+.animation-control button[aria-pressed="true"] { background: var(--text-strong); color: var(--background); }
+@media (prefers-reduced-motion: reduce) { .animation-control { display:none; } }

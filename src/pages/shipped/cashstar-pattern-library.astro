@@ -16,10 +16,11 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
         </p>
       </div>
     </header>
+    <div class="container animation-control"><button type="button" data-motion-toggle aria-pressed="false">Pause case-study animations</button></div>
 
     <section class="case-study__section">
       <div class="container narrow">
-        <p class="case-study__label">The problem</p>
+        <h2 class="case-study__label">The problem</h2>
         <p>
           The existing gift card platform had accumulated years of tech debt. Poor conversion rates. No mobile optimization. Every retailer that white-labeled CashStar inherited the same UX pain, and no matter how good the marketing was, the checkout flow bled customers.
         </p>
@@ -29,11 +30,11 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
     <section class="case-study__section case-study__section--wide">
       <figure class="figure figure--split">
         <div>
-          <img src="/case-studies/patterns/bestbuy-before.png" alt="Best Buy gift card flow — before redesign" loading="lazy" />
+          <img src="/case-studies/patterns/bestbuy-before.webp" alt="Best Buy gift card flow — before redesign" loading="lazy"  width="1280" height="669" />
           <figcaption>Before — the flow customers dropped out of.</figcaption>
         </div>
         <div>
-          <img src="/case-studies/patterns/bestbuy-after.png" alt="Best Buy gift card flow — after redesign" loading="lazy" />
+          <img src="/case-studies/patterns/bestbuy-after.webp" alt="Best Buy gift card flow — after redesign" loading="lazy"  width="1280" height="669" />
           <figcaption>After — the flow that shipped.</figcaption>
         </div>
       </figure>
@@ -41,12 +42,12 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 
     <section class="case-study__section">
       <div class="container narrow">
-        <p class="case-study__label">My role</p>
+        <h2 class="case-study__label">My role</h2>
         <p>
           I led the end-to-end redesign of the platform experience and built a responsive pattern library from scratch. Everything from motion behavior to input validation, in one system that other retailers could adopt without redoing the work.
         </p>
 
-        <p class="case-study__label">Process</p>
+        <h2 class="case-study__label">Process</h2>
         <ul>
           <li>Aligned on MVP and future requirements with product</li>
           <li>Usability studies on three prototypes to validate design direction</li>
@@ -59,14 +60,14 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 
     <section class="case-study__section case-study__section--wide">
       <figure class="figure">
-        <img src="/case-studies/patterns/steps.gif" alt="Animated demonstration of the redesigned purchase flow steps" loading="lazy" />
+        <picture><source media="(prefers-reduced-motion: reduce)" srcset="/case-studies/patterns/steps-still.webp" /><img data-animated="/case-studies/patterns/steps.gif" data-still="/case-studies/patterns/steps-still.webp" src="/case-studies/patterns/steps.gif" alt="Animated demonstration of the redesigned purchase flow steps" loading="lazy"  width="1200" height="675" /></picture>
         <figcaption>The redesigned steps in motion.</figcaption>
       </figure>
     </section>
 
     <section class="case-study__section">
       <div class="container narrow">
-        <p class="case-study__label">The result</p>
+        <h2 class="case-study__label">The result</h2>
         <p>
           The redesigned, mobile-optimized platform lifted <strong>conversion by 70%</strong> and cut <strong>purchase times in half</strong>. My pattern library became CashStar's scalable design system — the foundation every retailer built on.
         </p>
@@ -75,14 +76,14 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 
     <section class="case-study__section case-study__section--wide">
       <figure class="figure">
-        <img src="/case-studies/patterns/brands.gif" alt="Brands using the CashStar white-label platform" loading="lazy" />
+        <picture><source media="(prefers-reduced-motion: reduce)" srcset="/case-studies/patterns/brands-still.webp" /><img data-animated="/case-studies/patterns/brands.gif" data-still="/case-studies/patterns/brands-still.webp" src="/case-studies/patterns/brands.gif" alt="Brands using the CashStar white-label platform" loading="lazy"  width="1200" height="627" /></picture>
         <figcaption>A slice of the brands that shipped on top of the system.</figcaption>
       </figure>
     </section>
 
     <section class="case-study__section">
       <div class="container narrow">
-        <p class="case-study__label">What I actually did</p>
+        <h2 class="case-study__label">What I actually did</h2>
         <ul>
           <li>Resolved core UX pain points through user research</li>
           <li>Developed consistent, responsive patterns and components</li>
